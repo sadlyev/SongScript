@@ -1,7 +1,7 @@
 .header {
-    background-color: #0d051f;
+    background-color: #0e0520;
     width: 100%;
-    padding: 20px;
+    padding: 10px 150px;
 }
 
 .header_wrapper {
@@ -13,4 +13,25 @@
     margin: 0;
     padding: 0;
     display: flex;
+    gap: 15px;
+    
+}
+
+.header_menu-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #a08eb5;
+    text-decoration: none;;
+}
+
+.header_logo {
+     color: #a08eb5;
+}
+
+.header_wrapper {
+    display: flex;
+    align-items: center;
+
 }
