@@ -1,5 +1,6 @@
-@import "./blocks/header.scss";
+@import "./blocks/_header.scss";
 
+// global 
 
-// global
-@import "./global/main.scss";
+@import "./global/settings";
+@import "./global/container";
