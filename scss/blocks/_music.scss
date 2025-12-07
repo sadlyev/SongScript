@@ -1,0 +1,56 @@
+.music {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.music_logo-image {
+  position: relative;
+  padding: 0 40px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-image: linear-gradient(90deg, #0c0926, #9e60d6);
+    width: 50px;
+    height: 2px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    background-image: linear-gradient(90deg, #9e60d6, #0c0926);
+    width: 50px;
+    height: 2px;
+  }
+}
+
+.music_logo-icon {
+  color: #9e60d6;
+}
+
+.music_logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.music_logo-text {
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.music_descrb {
+  text-align: center;
+  color: #967eb1;
+  font-size: 20px;
+}
