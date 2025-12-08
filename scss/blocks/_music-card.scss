@@ -1,0 +1,88 @@
+.music_all {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+.music_list {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 30px;
+}
+
+.music_card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 350px;
+  background-color: #241656a1;
+  border-radius: 20px;
+  padding: 25px 20px;
+  border: 2px solid #252371;
+  scale: 1;
+  transition: border 0.3s, box-shadow 0.3s, scale ease-in 0.3s;
+  user-select: none;
+
+  &:hover {
+    border: 2px solid #48467b;
+    box-shadow: 0 0 15px #48467b;
+    scale: 1.05;
+    transition: border 0.3s, box-shadow 0.3s, scale ease-in 0.3s;
+  }
+}
+
+.music_card-top {
+  display: flex;
+  justify-items: center;
+  gap: 20px;
+  margin: 0 0 20px;
+}
+
+.music_card-descrb {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.music_card-icon {
+  background-color: #222b75;
+  border-radius: 15px;
+  padding: 10px;
+  color: #729ddb;
+}
+
+.music_card-title {
+  color: #729ddb;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: normal;
+}
+
+.music_card-name {
+  color: #a6a0bc;
+  font-size: 15px;
+}
+
+.music_card-lyric {
+  color: #bab4ca;
+  font-size: 20px;
+  text-decoration: italic;
+  line-height: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.music_card-quot {
+  position: absolute;
+  top: 70px;
+  color: #343772;
+  left: 8px;
+}
