@@ -1,10 +1,10 @@
 
 
 class Card {
-  constructor(title, artist, duration, lyrics) {
+  constructor(title, artist, lyrics, mp3) {
     this.title = title
     this.artist = artist
-    this.duration = duration
+    this.mp3 = mp3
     this.lyrics = lyrics
   }
 
@@ -30,10 +30,21 @@ class Card {
              <svg class="music_card-quot" width="50"height="50" aria-hidden="true">
                 <use href="./img/sprite.svg#quatation-icon"></use>
               </svg>
+             
+              <audio class="music_card-audio visually-hidden" controls>
+                <source src="${this.mp3}" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
           </div>
     `
 
     ulEl.append(this.liEl)
+    this.audioCard = this.liEl.querySelector('.music_card')
+    this.liEl.addEventListener('click', () => {
+       this.audioEl = this.audioCard.querySelector('.music_card-audio')
+        this.audioEl.play()
+        
+    })
   }
 
 }
@@ -45,7 +56,7 @@ export async function renderCards() {
   const songsList = await fetch("./js/data.json")
   const songsData = await songsList.json()
   songsData.forEach((song) => {
-    const card =  new Card(song.title, song.artist, song.duration, song.lyrics)
+    const card =  new Card(song.title, song.artist, song.lyrics, song.mp3)
     card.createCard()
   })
 }
