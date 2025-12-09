@@ -1,4 +1,4 @@
-
+import {playSong} from "./handleButtonEvenets.js"
 
 class Card {
   constructor(title, artist, lyrics, mp3) {
@@ -39,12 +39,7 @@ class Card {
     `
 
     ulEl.append(this.liEl)
-    this.audioCard = this.liEl.querySelector('.music_card')
-    this.liEl.addEventListener('click', () => {
-       this.audioEl = this.audioCard.querySelector('.music_card-audio')
-        this.audioEl.play()
-        
-    })
+    
   }
 
 }
@@ -59,5 +54,8 @@ export async function renderCards() {
     const card =  new Card(song.title, song.artist, song.lyrics, song.mp3)
     card.createCard()
   })
+
+  playSong()
+
 }
 
