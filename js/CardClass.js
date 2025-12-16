@@ -46,14 +46,34 @@ class Card {
 
 export async function renderCards() {
    const ulEl =  document.querySelector('.music_list')
-   ulEl.innerHTML = ""
+   const searchInput = document.querySelector(".header_menu-inputSearch")
 
-  const songsList = await fetch("./js/data.json")
+   const songsList = await fetch("./js/data.json")
   const songsData = await songsList.json()
-  songsData.forEach((song) => {
+
+  ulEl.innerHTML = ""
+
+
+   searchInput.addEventListener("input", function(e) {
+    ulEl.innerHTML = ""
+
+    const filtered = songsData.filter((el) => el.title.trim().toLowerCase().includes(searchInput.value.trim().toLowerCase()))
+    doRender(filtered)
+    playSong()
+   })
+   
+
+  
+
+  function doRender(list) {
+    list.forEach((song) => {
     const card =  new Card(song.title, song.artist, song.lyrics, song.mp3)
     card.createCard()
   })
+  }
+
+  doRender(songsData)
+  
 
   playSong()
 

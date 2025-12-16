@@ -31,6 +31,22 @@
   gap: 5px;
 }
 
+.header_menu-searchSong {
+  display: flex;
+  color: #a692bd;
+  gap: 5px;
+  align-items: center;
+}
+.header_menu-searchSong .header_menu-inputSearch {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+}
+.header_menu-searchSong .header_menu-inputSearch:hover {
+  background-color: #e1f0f6;
+}
+
 .header_logo {
   display: flex;
   align-items: center;
@@ -228,10 +244,16 @@ main {
   padding: 100px 0 0 0;
   background-image: linear-gradient(150deg, #0c0926, #380462, #0c0926);
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 .visually-hidden {
   opacity: 0;
+}
+
+.visually-hidden-out {
+  opacity: 0;
+  position: absolute;
 }
 
 .container {

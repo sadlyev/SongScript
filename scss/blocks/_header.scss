@@ -31,6 +31,24 @@
   gap: 5px;
 }
 
+.header_menu-searchSong {
+  display: flex;
+  color: #a692bd;
+  gap: 5px;
+  align-items: center;
+
+  .header_menu-inputSearch {
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 10px;
+    outline: none;
+
+    &:hover {
+      background-color: #e1f0f6;
+    }
+  }
+}
+
 .header_logo {
   display: flex;
   align-items: center;
