@@ -31,7 +31,7 @@ class Card {
                 <use href="./img/sprite.svg#quatation-icon"></use>
               </svg>
              
-              <audio class="music_card-audio visually-hidden" controls>
+              <audio class="music_card-audio visually-hidden">
                 <source src="${this.mp3}" type="audio/mpeg">
                 Your browser does not support the audio element.
               </audio>

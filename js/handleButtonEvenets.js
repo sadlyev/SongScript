@@ -5,7 +5,9 @@ export  function playSong() {
 
   cards.forEach((card) => {
     card.addEventListener("click", async  function (e) {
-      let song = e.target.closest(".music_card-audio");
+      const song = card.querySelector(".music_card-audio");
+      
+      if (!song) return
 
       if (currentSong === song) {
         if (song.paused) {
