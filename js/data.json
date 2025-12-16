@@ -5,23 +5,31 @@
         "title": "I Got Better",
         "artist": "Morgan Wallen",
         "duration": "3:45",
-        "lyrics": "A reflection on healing after heartbreak — saying he’s changed, not fully healed.",
-        "mp3": "./songs/Morgan Wallen - I Got Better (Official Music Video).mp3"
+        "lyrics": "When we were over, it was overnight Light came on, it all felt right, when it all went wrong.",
+        "mp3": "./songs/I Got Better.m4a"
     },
 
     {
-        "title": "Last Night",
+        "title": "Love Somebody",
+        "artist": "Morgan Wallen",
+        "duration": "3:15",
+        "lyrics": "I just wanna love somebody Who won't leave a hole in my heart I just wanna love somebody That don't want me fallin' apart.",
+         "mp3": "./songs/Love Somebody   Morgan Wallen.mp3"
+    },
+
+    {
+        "title": "Interlude",
         "artist": "Morgan Wallen",
         "duration": "2:43",
-        "lyrics": "A messy late-night conversation where two people can't fully walk away from each other.",
-         "mp3": "./songs/Morgan Wallen - I Got Better (Official Music Video).mp3"
+        "lyrics": "You're why I drink too much You're why I love that taste Yeah, if we're movin' on Girl, we just keep movin'.",
+         "mp3": "./songs/Interlude.m4a"
     },
 
     {
-        "title": "Wasted on You",
+        "title": "Kiss Her In Front Of You",
         "artist": "Morgan Wallen",
         "duration": "3:12",
-        "lyrics": "He realizes he spent too much time, love, and effort on someone who didn’t stay.",
+        "lyrics": "But I can't wait to kiss her in front of you I can't wait to put you through the hell that you put me through.",
          "mp3": "./songs/Morgan Wallen - I Got Better (Official Music Video).mp3"
     },
 

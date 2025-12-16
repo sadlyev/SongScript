@@ -1,17 +1,17 @@
-export function playSong() {
+export  function playSong() {
   const cards = document.querySelectorAll(".music_item");
 
   let currentSong = null;
 
   cards.forEach((card) => {
-    card.addEventListener("click", function (e) {
+    card.addEventListener("click", async  function (e) {
       let song = e.target.closest(".music_card-audio");
 
       if (currentSong === song) {
         if (song.paused) {
-          song.play();
+                await song.play();
         } else {
-          song.pause();
+          await song.pause();
           return;
         }
       } else if (currentSong) {
@@ -19,7 +19,7 @@ export function playSong() {
         currentSong.currentTime = 0;
       }
 
-      song.play();
+      await song.play();
       currentSong = song;
     });
   });
@@ -36,9 +36,16 @@ export function handleSearch() {
 
     if (!inputSearch.classList.contains("visually-hidden-out")) {
       inputIcon.addEventListener("click", function (e) {
-        e.preventDefault(), searchBtn.classList.toggle("visually-hidden-out");
+        e.preventDefault(), 
+
+       
+        
+        searchBtn.classList.toggle("visually-hidden-out");
         inputSearch.classList.toggle("visually-hidden-out");
+        
       });
+
+       inputSearch.value = ""
     }
   });
 }
