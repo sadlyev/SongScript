@@ -6,7 +6,8 @@
         "artist": "Morgan Wallen",
         "duration": "3:45",
         "lyrics": "When we were over, it was overnight Light came on, it all felt right, when it all went wrong.",
-        "mp3": "./songs/I Got Better.m4a"
+        "mp3": "./songs/I Got Better.m4a",
+        "liked": false
     },
 
     {
@@ -14,7 +15,8 @@
         "artist": "Morgan Wallen",
         "duration": "3:15",
         "lyrics": "I just wanna love somebody Who won't leave a hole in my heart I just wanna love somebody That don't want me fallin' apart.",
-         "mp3": "./songs/Love Somebody   Morgan Wallen.mp3"
+         "mp3": "./songs/Love Somebody   Morgan Wallen.mp3",
+         "liked": false
     },
 
     {
@@ -22,7 +24,8 @@
         "artist": "Morgan Wallen",
         "duration": "2:43",
         "lyrics": "You're why I drink too much You're why I love that taste Yeah, if we're movin' on Girl, we just keep movin'.",
-         "mp3": "./songs/Interlude.m4a"
+         "mp3": "./songs/Interlude.m4a",
+         "liked": false
     },
 
     {
@@ -30,7 +33,8 @@
         "artist": "Morgan Wallen",
         "duration": "3:12",
         "lyrics": "But I can't wait to kiss her in front of you I can't wait to put you through the hell that you put me through.",
-         "mp3": "./songs/Kiss Her In Front Of You.m4a"
+         "mp3": "./songs/Kiss Her In Front Of You.m4a",
+         "liked": false
     }
 
     
