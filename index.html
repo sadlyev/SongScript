@@ -59,7 +59,28 @@
                   <use href="./img/sprite.svg#web-like"></use>
                 </svg>
                 <span class="header_menu-text">Favorites</span>
+                
               </a>
+              <ul class="header_menu-favoriteList">
+                  <li class="header_menu-favoriteItem">
+                    <svg
+                      class="music_card-icon"
+                      width="50"
+                      height="50"
+                      aria-hidden="true"
+                    >
+                      <use href="./img/sprite.svg#web-logo"></use>
+                    </svg>
+                    <div class="music_card-descrb">
+                      <span class="music_card-title">${this.title}</span>
+                      <span class="music_card-name">${this.artist}</span>
+                    </div>
+                    <audio class="music_card-audio" controls>
+                      <source src="#" type="audio/mpeg" />
+                      Your browser does not support the audio element.
+                    </audio>
+                  </li>
+                </ul>
             </li>
             <li class="header_menu-item">
               <a href="#" class="header_menu-inner">
@@ -86,7 +107,10 @@
                 </svg>
                 <span class="header_menu-text">Search</span>
               </a>
-              <label class="header_menu-searchSong visually-hidden-out" for="searchSong">
+              <label
+                class="header_menu-searchSong visually-hidden-out"
+                for="searchSong"
+              >
                 <svg
                   class="header_menu-searchIcon"
                   width="20"
@@ -95,7 +119,12 @@
                 >
                   <use href="./img/sprite.svg#web-search"></use>
                 </svg>
-                <input class="header_menu-inputSearch" type="text" placeholder="Search" id="searchSong">
+                <input
+                  class="header_menu-inputSearch"
+                  type="text"
+                  placeholder="Search"
+                  id="searchSong"
+                />
               </label>
             </li>
           </ul>
@@ -126,9 +155,7 @@
               the soul.
             </h1>
           </div>
-          <ul class="music_list">
-             
-          </ul>
+          <ul class="music_list"></ul>
         </div>
       </div>
     </main>

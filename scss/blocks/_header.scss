@@ -19,6 +19,10 @@
   gap: 30px;
 }
 
+.header_menu-item {
+  position: relative;
+}
+
 .header_menu-inner {
   color: #a692bd;
   font-family: "Poppins", sans-serif;
@@ -69,4 +73,30 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
+}
+
+.header_menu-favoriteList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background-color: #294053;
+
+  .header_menu-favoriteItem {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .music_card-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 2px;
+  }
 }

@@ -49,6 +49,16 @@ class Card {
               </label>
     `;
 
+    const checkLiked = this.liEl.querySelector(".music_card-likedCheck")
+    checkLiked.addEventListener("change", () => {
+      if (checkLiked.checked) {
+        console.log("checked")
+
+      } 
+    })
+
+
+
     ulEl.append(this.liEl);
   }
 }
@@ -85,10 +95,14 @@ export async function renderCards() {
         song.liked
       );
       card.createCard();
+ 
     });
   }
 
   doRender(songsData);
 
   playSong();
+
+  
+    
 }
