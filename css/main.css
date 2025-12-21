@@ -170,7 +170,7 @@
 }
 
 .favorite_list {
-  display: none;
+  display: grid;
   grid-template-columns: repeat(3, 300px);
   margin: 0;
   padding: 0;

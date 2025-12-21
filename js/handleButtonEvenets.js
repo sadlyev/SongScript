@@ -1,19 +1,19 @@
-import { renderCards } from "./CardClass.js"
+import { renderCards } from "./CardClass.js";
 
-export  function playSong() {
+export function playSong() {
   const cards = document.querySelectorAll(".music_item");
 
   let currentSong = null;
 
   cards.forEach((card) => {
-    card.addEventListener("click", async  function (e) {
+    card.addEventListener("click", async function (e) {
       const song = card.querySelector(".music_card-audio");
-      
-      if (!song) return
+
+      if (!song) return;
 
       if (currentSong === song) {
         if (song.paused) {
-                await song.play();
+          await song.play();
         } else {
           await song.pause();
           return;
@@ -40,22 +40,17 @@ export function handleSearch() {
 
     if (!inputSearch.classList.contains("visually-hidden-out")) {
       inputIcon.addEventListener("click", function (e) {
-        e.preventDefault(), 
-
-       
-        
-        searchBtn.classList.toggle("visually-hidden-out");
+        e.preventDefault(), searchBtn.classList.toggle("visually-hidden-out");
         inputSearch.classList.toggle("visually-hidden-out");
-        
       });
 
-       inputSearch.value = ""
+      inputSearch.value = "";
     }
   });
 }
 
 export function createIntro() {
-  const contain = document.querySelector(".music")
+  const contain = document.querySelector(".music");
   contain.innerHTML = `
   
             <div class="music_logo">
@@ -77,43 +72,49 @@ export function createIntro() {
               tells a story, each word paints a picture, and every line touches
               the soul.
             </h1>
-  ` 
+  `;
 }
 
 export function navFunc(el) {
-  switch(el) {
-    case "songs": 
-    renderCards()
-    handleSearch()
-    const ulEl1 = document.querySelector(".music_list");
-    const ulEl = document.querySelector(".favorite_list");
-    ulEl1.style.display = "grid"
-    ulEl.style.display = "none"
-    break;
-    case "favorite": 
-    
-    handleSearch()
+  const ulEl1 = document.querySelector(".music_list");
+  const ulEl = document.querySelector(".favorite_list");
 
+  switch (el) {
+    case "songs":
+      renderCards();
+      handleSearch();
+
+      break;
+    case "favorite":
+      renderCards();
+      handleSearch();
   }
 
 
-  const favs = document.querySelector(".header_menu-favoriteBtn")
-  favs.addEventListener("click", function(e) {
-    e.preventDefault;
-    const ulEl1 = document.querySelector(".music_list");
-    const ulEl = document.querySelector(".favorite_list");
-    ulEl.style.display = "grid"
-    ulEl1.style.display = "none"
-    console.log("hii")
-    navFunc("favorite")
-  })
+    const favBtn = document.querySelector(".header_menu-favoriteBtn")
+    favBtn.addEventListener("click", function(e) {
+      e.preventDefault()
+      navFunc("favorite")
+      const checkedfavCards = Array.from(ulEl1.querySelectorAll(".music_card-likedCheck:checked"))
+      
+
+      checkedfavCards.map((item) => {
+        
+      const a = item.closest(".music_item") 
+        ulEl.appendChild(a.cloneNode(true))
+      })
+
+      
+      
+
+    })
+  
 }
 
-
 export function doSongPage() {
-  const pageLogo = document.querySelector(".header_logo")
-  pageLogo.addEventListener("click", function(e) {
-    e.preventDefault()
-    navFunc("songs")
-  })
+  const pageLogo = document.querySelector(".header_logo");
+  pageLogo.addEventListener("click", function (e) {
+    e.preventDefault();
+    navFunc("songs");
+  });
 }

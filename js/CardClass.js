@@ -11,7 +11,6 @@ class Card {
   }
 
   createCard(cont) {
-
     this.liEl = document.createElement("li");
     this.liEl.classList.add("music_item");
 
@@ -52,16 +51,17 @@ class Card {
 
     cont.append(this.liEl);
   }
-
 }
 
 export async function renderCards() {
   const ulEl = document.querySelector(".music_list");
   const searchInput = document.querySelector(".header_menu-inputSearch");
-  
 
-  const songsList = await fetch("./js/data.json");
-  const songsData = await songsList.json();
+
+    const songsList = await fetch("./js/data.json");
+    const songsData = await songsList.json();
+
+
 
   ulEl.innerHTML = "";
 
@@ -88,12 +88,10 @@ export async function renderCards() {
         song.liked
       );
       card.createCard(ulEl);
- 
     });
   }
 
-  createIntro()
+  createIntro();
   doRender(songsData);
-  playSong(); 
-    
+  playSong();
 }
