@@ -1,4 +1,5 @@
 import { playSong } from "./handleButtonEvenets.js";
+import { createIntro } from "./handleButtonEvenets.js";
 
 class Card {
   constructor(title, artist, lyrics, mp3, liked) {
@@ -55,6 +56,7 @@ class Card {
         console.log("checked")
 
       } 
+
     })
 
 
@@ -66,6 +68,7 @@ class Card {
 export async function renderCards() {
   const ulEl = document.querySelector(".music_list");
   const searchInput = document.querySelector(".header_menu-inputSearch");
+  
 
   const songsList = await fetch("./js/data.json");
   const songsData = await songsList.json();
@@ -98,6 +101,8 @@ export async function renderCards() {
  
     });
   }
+
+  createIntro()
 
   doRender(songsData);
 

@@ -1,3 +1,5 @@
+import { renderCards } from "./CardClass.js"
+
 export  function playSong() {
   const cards = document.querySelectorAll(".music_item");
 
@@ -50,4 +52,40 @@ export function handleSearch() {
        inputSearch.value = ""
     }
   });
+}
+
+export function createIntro() {
+  const contain = document.querySelector(".music")
+  contain.innerHTML = `
+  
+            <div class="music_logo">
+              <div class="music_logo-image">
+                <svg
+                  class="music_logo-icon"
+                  width="60"
+                  height="60"
+                  aria-hidden="true"
+                >
+                  <use href="./img/sprite.svg#web-logo"></use>
+                </svg>
+              </div>
+
+              <span class="music_logo-text">Music Moments</span>
+            </div>
+            <h1 class="music_descrb">
+              Discover beautiful verses from your favorite artists. Each lyric
+              tells a story, each word paints a picture, and every line touches
+              the soul.
+            </h1>
+  ` 
+}
+
+export function navFunc(el) {
+  switch(el) {
+    case "songs": 
+    renderCards()
+    handleSearch()
+    break;
+
+  }
 }
