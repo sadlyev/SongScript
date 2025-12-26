@@ -135,6 +135,7 @@ export function doSongPage() {
      ulEl.style.display = "none";
 
       window.location.href = window.location.href;
+      window.location.reload()
   });
 }
 
