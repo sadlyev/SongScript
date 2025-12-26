@@ -99,5 +99,5 @@ export async function renderCards() {
   doRender(songsData);
   playSong();
 
-  console.log(addClasses())
+  addClasses()
 }

@@ -92,12 +92,19 @@ export function createfavoriteList() {
   
   const ulEl1 = document.querySelector(".music_list");
   const ulEl = document.querySelector(".favorite_list");
+  const searchBtn = document.querySelector(".header_menu-searchBtn")
+
+  
 
   const favBtn = document.querySelector(".header_menu-favoriteBtn");
 
   favBtn.addEventListener("click", function (e) {
     e.preventDefault();
     navFunc("favorite");
+
+    searchBtn.style.display = "none"
+
+
 
     const checkedfavCards = Array.from(
       ulEl1.querySelectorAll(".music_card-likedCheck:checked")
@@ -118,6 +125,7 @@ export function createfavoriteList() {
       }
     });
   });
+
 }
 
 export function doSongPage() {
@@ -130,20 +138,25 @@ export function doSongPage() {
      ulEl1.style.display = "grid";
      ulEl.style.display = "none";
 
+     const searchBtn = document.querySelector(".header_menu-searchBtn")
+
+  searchBtn.style.display = "flex"
+
       window.location.href = window.location.href;
   });
 }
 
+// for changing classes
 export function addClasses() {
-  const listOfClasses = ["purple_item", "green_item", "red_item"]
+  const listOfClasses = ["purple_item", "green_item", "red_item", "blue_item"]
   const allCards = Array.from(document.querySelectorAll(".music_item"))
 
   return allCards.forEach((card) => {
-    if (listOfClasses.map((aClass) => card.classList.contains(aClass))) {
-      console.log("i dont contain any of those classes")
-    } else {
-      console.log("i contain some of em")
-    }
+
+    card.classList.remove(...listOfClasses)
+     const newClass = listOfClasses[(Math.floor(Math.random() * listOfClasses.length))]
+     card.classList.add(newClass)
+ 
   } )
 
 
