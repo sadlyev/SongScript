@@ -35,12 +35,17 @@ export function handleSearch() {
   const inputIcon = document.querySelector(".header_menu-searchIcon");
 
   searchBtn.addEventListener("click", function (e) {
+    e.preventDefault()
+
+    console.log("im clicked")
     searchBtn.classList.toggle("visually-hidden-out");
     inputSearch.classList.toggle("visually-hidden-out");
 
     if (!inputSearch.classList.contains("visually-hidden-out")) {
       inputIcon.addEventListener("click", function (e) {
-        e.preventDefault(), searchBtn.classList.toggle("visually-hidden-out");
+        e.preventDefault(), 
+        
+        searchBtn.classList.toggle("visually-hidden-out");
         inputSearch.classList.toggle("visually-hidden-out");
       });
 
@@ -79,12 +84,10 @@ export function navFunc(el) {
   switch (el) {
     case "songs":
       renderCards();
-      handleSearch();
 
       break;
     case "favorite":
       renderCards();
-      handleSearch();
   }
 }
 
