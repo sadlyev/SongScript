@@ -82,7 +82,7 @@ export async function renderCards() {
   });
 
   function doRender(list) {
-    list.forEach((song, index) => {
+   const a = list.forEach((song, index) => {
       const card = new Card(
         song.title,
         song.artist,
@@ -93,6 +93,8 @@ export async function renderCards() {
       );
       card.createCard(ulEl);
     });
+
+    
   }
 
   createIntro();

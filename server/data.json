@@ -35,6 +35,14 @@
         "lyrics": "But I can't wait to kiss her in front of you I can't wait to put you through the hell that you put me through.",
          "mp3": "./songs/Kiss Her In Front Of You.m4a",
          "liked": false
+    },
+
+    {
+        "title": "Superman",
+        "artist": "Morgan Wallen",
+        "lyrics": "No, I don't always save the day But you know for you, I'll always try I do the best I can, but Superman's Still just a man sometimes",
+        "mp3": "./songs/Superman   Morgan Wallen.m4a",
+        "liked": false
     }
 
     

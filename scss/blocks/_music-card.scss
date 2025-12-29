@@ -110,7 +110,7 @@
 
 .music_card-lyric {
   color: #bab4ca;
-  font-size: 20px;
+  font-size: 18px;
   font-style: italic;
   line-height: 40px;
   display: flex;
@@ -118,7 +118,7 @@
   margin: 0 20px;
 
   @include vp-mobile {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
   }
 }
