@@ -101,6 +101,11 @@ export function createfavoriteList() {
     e.preventDefault();
     navFunc("favorite");
 
+    const thatLi = document.querySelector(".header_menu-searchBehavior")
+    if (!thatLi.classList.contains("visually-hidden-out")) {
+      thatLi.classList.add("visually-hidden-out")
+    } 
+
     const checkedfavCards = Array.from(
       ulEl1.querySelectorAll(".music_card-likedCheck:checked")
     );
